@@ -56,8 +56,6 @@ To run this project locally, follow these steps:
 ```
 portfolio-website/
 ├── public/
-│   ├── logo.png
-│   └── resume.pdf
 ├── src/
 │   ├── components/
 │   │   ├── About.jsx
