@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --secondary: #fcfdfe;
+  --primary: theme(--color-neutral-800);
+  --shadow-color: #1a1a1a;
+  --mask-color: rgb(152 152 152);
+}
+
+:root.dark {
+  --secondary: rgb(16 16 16);
+  --primary: theme(--color-gray-200);
+  --shadow-color: #e4e4e4;
+  --mask-color: rgb(80 80 80);
+}
+
+
+body {
+  @apply text-primary;
+  @apply bg-secondary;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-navbar-bg: var(--navbar-bg);
+  --color-shadow: var(--shadow-color);
+} 
+
+
+.custom-rotate {
+  transform: rotate(15deg);
+  transform-style: preserve-3d;
+}
+
+.custom-shadow {
+  box-shadow: 16px 0 40px var(--shadow-color);
+}
+
+.group:hover .group-hover-before-animation::before {
+  animation: custom-animation 1.2s infinite;
+}
+
+.pattern-bg {
+  position: absolute;
+  top: -3rem;
+  left:-3rem;
+  right: -3rem;
+  bottom: -3rem;
+  width: calc(100% + 6rem);
+  z-index: -1;
+  background-image: linear-gradient(var(--mask-color) 3.3000000000000003px, transparent 3.3000000000000003px), linear-gradient(to right, var(--mask-color) 3.3000000000000003px, transparent 3.3000000000000003px);
+  background-size: 66px 66px;
+
+}
+.default-fade {
+  -webkit-mask: radial-gradient(ellipse 80% 60% at center, var(--secondary) 0%, transparent 70%);
+  mask: radial-gradient(ellipse 80% 60% at center, var(--secondary) 0%, transparent 70%);
+}
+
+@keyframes custom-animation {
+    0% {
+        box-shadow: 0 0 var(--primary)
+    }
+
+    to {
+        box-shadow: 0 0 0 6px #fff0
+    }
+}
