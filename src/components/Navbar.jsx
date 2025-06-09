@@ -14,8 +14,8 @@ const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   return (
     <header>
-      <nav className="fixed top-0 left-0 w-full p-4 z-50 bg-secondary">
-        <div className="container mx-auto flex justify-between items-center text-primary px-4 md:px-8">
+      <nav className="fixed top-0 left-0 w-full p-4 z-50 bg-secondary max-w-screen">
+        <div className="container relative mx-auto flex justify-between items-center text-primary px-4 md:px-8">
           <div className="flex gap-4 items-center relative after:absolute after:right-full after:bg-primary after:h-px after:w-[calc(100vw-100%)] transition-colors duration-300">
             <a href="#home">
               <LuHouse

@@ -9,7 +9,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 function App() {
   return (
     <ThemeProvider>
-      <main className="min-h-screen">
+      <main className="min-h-screen overflow-x-hidden">
         <Navbar />
         <Hero />
         <About />

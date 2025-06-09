@@ -33,12 +33,12 @@ const Hero = () => {
       onMouseLeave={() => setIsHovering(false)}
     >
       <div
-        className={`pattern-bg default-fade ${
+        className={`max-w-screen pattern-bg default-fade ${
           isHovering ? "opacity-0" : "opacity-30"
         } transition-opacity duration-300 ease-in-out`}
       ></div>
       <div
-        className={`pattern-bg transition-opacity duration-300 ease-in-out ${
+        className={`max-w-screen pattern-bg transition-opacity duration-300 ease-in-out ${
           isHovering ? "opacity-30" : "opacity-0"
         }`}
         style={{
