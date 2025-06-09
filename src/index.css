@@ -6,7 +6,7 @@
   --secondary: #fcfdfe;
   --primary: theme(--color-neutral-800);
   --shadow-color: #1a1a1a;
-  --mask-color: rgb(152 152 152);
+  --mask-color: rgb(190 190 190);
 }
 
 :root.dark {
